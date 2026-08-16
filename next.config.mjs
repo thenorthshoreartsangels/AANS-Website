@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextStep} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export', // Tells Next.js to generate static HTML/CSS/JS files
+  images: {
+    unoptimized: true, // Required for static exports
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
